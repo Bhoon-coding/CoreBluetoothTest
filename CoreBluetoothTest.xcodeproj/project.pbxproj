@@ -14,7 +14,7 @@
 		11351CCC2D13039500C2047D /* Exceptions for "CoreBluetoothTest" folder in "CoreBluetoothTest" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				Resources/Info.plist,
 			);
 			target = 11351CB92D13039400C2047D /* CoreBluetoothTest */;
 		};
@@ -147,7 +147,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H84YUCF7F5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CoreBluetoothTest/Info.plist;
+				INFOPLIST_FILE = CoreBluetoothTest/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -175,7 +175,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H84YUCF7F5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CoreBluetoothTest/Info.plist;
+				INFOPLIST_FILE = CoreBluetoothTest/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
