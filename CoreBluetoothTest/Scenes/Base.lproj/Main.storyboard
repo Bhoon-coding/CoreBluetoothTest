@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -16,8 +17,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QI9-WI-nYI">
-                                <rect key="frame" x="188.66666666666666" y="428" width="16" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJe-dX-hiM">
+                                <rect key="frame" x="40" y="139" width="83" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="검색시작"/>
+                                <connections>
+                                    <action selector="startSearchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jPR-A5-b1G"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FzE-nM-l1K">
+                                <rect key="frame" x="270" y="139" width="83" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="검색중지"/>
+                                <connections>
+                                    <action selector="stopSearchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XHt-1K-pD2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blutooth State" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MzM-Ie-3yI">
+                                <rect key="frame" x="142.33333333333334" y="99" width="108.66666666666666" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -26,12 +43,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="QI9-WI-nYI" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="lzd-no-3G0"/>
-                            <constraint firstItem="QI9-WI-nYI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qj6-EI-lPZ"/>
+                            <constraint firstItem="rJe-dX-hiM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="KNb-Wg-iUN"/>
+                            <constraint firstItem="rJe-dX-hiM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="WEi-3X-vqe"/>
+                            <constraint firstItem="MzM-Ie-3yI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="ZuD-cv-DY2"/>
+                            <constraint firstItem="MzM-Ie-3yI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ek3-k9-sLk"/>
+                            <constraint firstItem="FzE-nM-l1K" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="opO-gB-gD0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FzE-nM-l1K" secondAttribute="trailing" constant="40" id="uMU-G2-Rw0"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="hiLabel" destination="QI9-WI-nYI" id="ZGg-1G-j2R"/>
+                        <outlet property="bluetoothStateLabel" destination="MzM-Ie-3yI" id="bpU-9i-elA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
